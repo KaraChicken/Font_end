@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       let Year = prompt("請輸入年份");
+	   let Month = prompt("請輸入月份");
+	   let Day = prompt("請輸入日期");
+       let year = parseInt(Year);
+       let month = parseInt(Month);
+       let day = parseInt(Day);
+       
+        //根據使用者輸入的月份進行天數累加
+        for (let i = 1; i < month; i++){
+            if (i % 2 === 1 && i <= 7){
+            //計算奇數月
+                day += 31
+            } else if(i % 2 === 0 && i !== 2 && i <= 6){
+                //計算偶數月
+                day += 30;
+            } else if(i === 2 ){
+            //2月分開判斷
+                if ((year % 4 === 0) && (year % 100 !== 0 || year % 400 !== 0)){
+                //閏年規則：4年一閏且不被100或400整除
+                    day += 29;
+                } else {
+                    day +=28;
+                }
+            } else if (i % 2 === 0 && i >= 8){
+            //7、8月 大 ，規則改變
+                day += 31;
+            } else if(i % 2 === 1 && i >= 9){
+                day += 30;
+            } else if (i === month){
+                continue;
+            } 
+        }
+        document.write(`您所設定的日期為${Year}年的第${day}天`);
+    </script>
+</body>
+
+</html>

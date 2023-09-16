@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice</title>
+  <style>
+	body {
+	
+		margin: 0;
+		background-color: white;
+		
+		/*對齊*/
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	.one, .two, .three, .four, .five, .six {
+		width: 100px;
+		height: 100px;
+		
+		margin: 1px;
+		border: 1px solid black;
+		border-radius: 10px;
+		padding: 5px;
+		
+		float: left;
+		position: relative;
+		background-image: linear-gradient(45deg, #cdcbcb, rgb(255, 255, 255));
+	}
+	
+	/*圓點屬性*/
+	.dot {
+		width: 20px;
+		height: 20px;
+		background-color: black;
+		border-radius: 50%;
+		position: absolute;
+	}
+	/* 定義 中心 */
+	.dot1, .dot3, .dot5 {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	/* 定義 右下*/
+	.dot2, .dot3-1, .dot4, .dot5-1, .dot6{
+		right: 0;
+		bottom: 0;
+		transform: translate(-50%, -50%);
+	}
+	/* 定義 右上 */
+	.dot4-2, .dot5-3, .dot6-1{
+		right: 0;
+		top: 0;
+		transform: translate(-50%, 50%);
+	}
+	/* 定義 左下 */
+	.dot4-1, .dot5-2, .dot6-2{
+		left: 0;
+		bottom: 0;
+		transform: translate(50%, -50%);
+	}
+
+		/* 定義 左上 */
+		.dot2-1, .dot3-2, .dot4-3, .dot5-4, .dot6-3{
+		left: 0;
+		top: 0;
+		transform: translate(50%, 50%);
+	}
+
+	/* 定義 左中 */
+	.dot6-4{
+		left: 0;
+		top: 50%;
+		transform: translate(50%, -50%);
+	}
+	/* 定義 右中 */
+	.dot6-5{
+		right: 0;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	/* 定義 one four 圓點顏色*/
+	.dot1, .dot4, .dot4-1, .dot4-2, .dot4-3{
+		background-color: red;
+	}
+  </style>
+</head>
+<body>
+	<div class="dice-box">
+		<div class="one">
+			<div class="dot dot1"></div>
+		</div>
+		<div class="two">
+			<div class="dot dot2"></div>
+			<div class="dot dot2-1"></div>
+		</div>
+		<div class="three">
+			<div class="dot dot3"></div>
+			<div class="dot dot3-1"></div>
+			<div class="dot dot3-2"></div>
+		</div>
+		<div class="four">
+			<div class="dot dot4"></div>
+			<div class="dot dot4-1"></div>
+			<div class="dot dot4-2"></div>
+			<div class="dot dot4-3"></div>
+		</div>
+		<div class="five">
+			<div class="dot dot5"></div>
+			<div class="dot dot5-1"></div>
+			<div class="dot dot5-2"></div>
+			<div class="dot dot5-3"></div>
+			<div class="dot dot5-4"></div>
+		</div>
+		<div class="six">
+			<div class="dot dot6"></div>
+			<div class="dot dot6-1"></div>
+			<div class="dot dot6-2"></div>
+			<div class="dot dot6-3"></div>
+			<div class="dot dot6-4"></div>
+			<div class="dot dot6-5"></div>
+		</div>
+	</div>
+</body>
+
+</html>
