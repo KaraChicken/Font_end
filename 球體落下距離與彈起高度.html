@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>球</title>
+</head>
+<body>
+    <script>
+        //計算第10次球高度和總距離
+        let height = 100;
+        let move = 100;
+        for(let i=1; i <= 9; i++){
+            //初始為100 迴圈第二次開始第一次除2
+            move += 100/2**(i-1);
+        }
+        for(let i=1; i <= 11; i++){
+            //由於計算包落下與彈起，故多除一次2
+            height = 100/2**(i-1)
+        }
+        document.write(
+            `<h2>Q.第 10 次落地時，共經過多少公尺？</h2><br>
+            <b>A.一共經過了 ${move} 公尺</b><hr>
+            <h2>Q.第 10 次反彈多高？</h2><br>
+            <b>A.高度為 ${height} 公尺</b>`
+            );
+    </script>
+</body>
+</html>
