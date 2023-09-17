@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星星塔</title>
+</head>
+<body>
+    <script>
+        let star = prompt("請輸入想印出的層數！");
+        for(let i=0; i <= star; i++){
+            //小於等於 star 字數
+            //這邊如果是 < 會少一層
+            for(let j=0; j < i; j++){
+                //決定橫向數量
+                document.write("★");
+            }
+            document.write(`<br>`)
+        }
+    </script>
+</body>
+</html>
